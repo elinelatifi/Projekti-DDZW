@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyrje - Projekti DDZW</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🌸 Floral Beauty</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Faqja Kryesore</a></li>
+                    <li><a href="about.html">Rreth Nesh</a></li>
+                    <li><a href="contact.html">Kontakti</a></li>
+                    <li><a href="login.html" class="active">Hyrje</a></li>
+                    <li><a href="register.html">Regjistrohu</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-wrapper">
+                    <div class="auth-card">
+                        <h2>Hyrje në Llogari</h2>
+                        <p class="auth-subtitle">Mirë se vini përsëri!</p>
+
+                        <form id="loginForm" class="auth-form">
+                            <div class="form-group">
+                                <label for="loginEmail">Email *</label>
+                                <input type="email" id="loginEmail" name="email" required>
+                                <span class="error-message" id="loginEmailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="loginPassword">Fjalëkalimi *</label>
+                                <input type="password" id="loginPassword" name="password" required>
+                                <span class="error-message" id="loginPasswordError"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                                    <span>Më mbaj mend</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-full">Hyr</button>
+                        </form>
+
+                        <div class="auth-footer">
+                            <p>Nuk keni llogari? <a href="register.html">Regjistrohu këtu</a></p>
+                            <p><a href="#" class="forgot-password">Keni harruar fjalëkalimin?</a></p>
+                        </div>
+
+                        <div id="loginSuccess" class="success-message" style="display: none;">
+                            Hyrja u krye me sukses!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Floral Beauty. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/login-validation.js"></script>
+</body>
+</html>
+

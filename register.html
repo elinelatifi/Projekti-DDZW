@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regjistrohu - Projekti DDZW</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🌸 Floral Beauty</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Faqja Kryesore</a></li>
+                    <li><a href="about.html">Rreth Nesh</a></li>
+                    <li><a href="contact.html">Kontakti</a></li>
+                    <li><a href="login.html">Hyrje</a></li>
+                    <li><a href="register.html" class="active">Regjistrohu</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-wrapper">
+                    <div class="auth-card">
+                        <h2>Krijo Llogari të Re</h2>
+                        <p class="auth-subtitle">Bashkohu me ne sot!</p>
+
+                        <form id="registerForm" class="auth-form">
+                            <div class="form-group">
+                                <label for="regName">Emri dhe Mbiemri *</label>
+                                <input type="text" id="regName" name="name" required>
+                                <span class="error-message" id="regNameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regEmail">Email *</label>
+                                <input type="email" id="regEmail" name="email" required>
+                                <span class="error-message" id="regEmailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regPhone">Telefoni</label>
+                                <input type="tel" id="regPhone" name="phone">
+                                <span class="error-message" id="regPhoneError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regPassword">Fjalëkalimi *</label>
+                                <input type="password" id="regPassword" name="password" required>
+                                <span class="error-message" id="regPasswordError"></span>
+                                <small class="form-hint">Të paktën 8 karaktere, me shkronjë të madhe dhe numër</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regConfirmPassword">Konfirmo Fjalëkalimin *</label>
+                                <input type="password" id="regConfirmPassword" name="confirmPassword" required>
+                                <span class="error-message" id="regConfirmPasswordError"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                    <span>Pranoj <a href="#">kushtet dhe rregullat</a> *</span>
+                                </label>
+                                <span class="error-message" id="agreeTermsError"></span>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-full">Regjistrohu</button>
+                        </form>
+
+                        <div class="auth-footer">
+                            <p>Keni tashmë llogari? <a href="login.html">Hyr këtu</a></p>
+                        </div>
+
+                        <div id="registerSuccess" class="success-message" style="display: none;">
+                            Regjistrimi u krye me sukses! Ju lutem kontrolloni email-in tuaj.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Floral Beauty. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/register-validation.js"></script>
+</body>
+</html>
+

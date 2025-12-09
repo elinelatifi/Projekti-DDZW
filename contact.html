@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakti - Projekti DDZW</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🌸 Floral Beauty</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Faqja Kryesore</a></li>
+                    <li><a href="about.html">Rreth Nesh</a></li>
+                    <li><a href="contact.html" class="active">Kontakti</a></li>
+                    <li><a href="login.html">Hyrje</a></li>
+                    <li><a href="register.html">Regjistrohu</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Na Kontaktoni</h1>
+                <p>Jemi këtu për t'ju ndihmuar</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2>Informacione Kontakti</h2>
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <h3>Adresa</h3>
+                                <p>Rruga Dëshmorët e Kombit<br>Prishtinë, Kosovë</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div>
+                                <h3>Telefoni</h3>
+                                <p>+383 44 123 456</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@floralbeauty.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">🕒</div>
+                            <div>
+                                <h3>Orari</h3>
+                                <p>E Hënë - E Shtunë: 09:00 - 18:00<br>E Dielë: Mbyllur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h2>Dërgoni Mesazh</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Emri dhe Mbiemri *</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefoni</label>
+                                <input type="tel" id="phone" name="phone">
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Tema *</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <span class="error-message" id="subjectError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mesazhi *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn-primary">Dërgo Mesazhin</button>
+                        </form>
+                        <div id="formSuccess" class="success-message" style="display: none;">
+                            Mesazhi u dërgua me sukses! Do t'ju kontaktojmë së shpejti.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Floral Beauty. Të gjitha të drejtat e rezervuara.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact-validation.js"></script>
+</body>
+</html>
+
