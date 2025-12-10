@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form values
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
             const subject = document.getElementById('subject').value.trim();
             const message = document.getElementById('message').value.trim();
             
@@ -33,12 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             } else if (!isValidEmail(email)) {
                 showError('emailError', 'Ju lutem shkruani një email të vlefshëm');
-                isValid = false;
-            }
-            
-            // Validate phone (optional but if provided, should be valid)
-            if (phone !== '' && !isValidPhone(phone)) {
-                showError('phoneError', 'Ju lutem shkruani një numër telefoni të vlefshëm');
                 isValid = false;
             }
             
@@ -78,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Real-time validation on blur
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
-        const phoneInput = document.getElementById('phone');
         const subjectInput = document.getElementById('subject');
         const messageInput = document.getElementById('message');
         
@@ -91,14 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (emailInput) {
             emailInput.addEventListener('blur', function() {
                 validateEmail();
-            });
-        }
-        
-        if (phoneInput) {
-            phoneInput.addEventListener('blur', function() {
-                if (phoneInput.value.trim() !== '') {
-                    validatePhone();
-                }
             });
         }
         
@@ -144,17 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    function validatePhone() {
-        const phone = document.getElementById('phone').value.trim();
-        if (phone !== '' && !isValidPhone(phone)) {
-            showError('phoneError', 'Ju lutem shkruani një numër telefoni të vlefshëm');
-            return false;
-        } else {
-            clearError('phoneError');
-            return true;
-        }
-    }
-    
     function validateSubject() {
         const subject = document.getElementById('subject').value.trim();
         if (subject === '') {
@@ -187,12 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
-    }
-    
-    function isValidPhone(phone) {
-        // Accepts phone numbers with or without +, spaces, dashes, parentheses
-        const phoneRegex = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,9}$/;
-        return phoneRegex.test(phone);
     }
     
     function showError(errorId, message) {

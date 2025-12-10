@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form values
             const name = document.getElementById('regName').value.trim();
             const email = document.getElementById('regEmail').value.trim();
-            const phone = document.getElementById('regPhone').value.trim();
             const password = document.getElementById('regPassword').value;
             const confirmPassword = document.getElementById('regConfirmPassword').value;
             const agreeTerms = document.getElementById('agreeTerms').checked;
@@ -37,18 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
             
-            // Validate phone (optional but if provided, should be valid)
-            if (phone !== '' && !isValidPhone(phone)) {
-                showError('regPhoneError', 'Ju lutem shkruani një numër telefoni të vlefshëm');
-                isValid = false;
-            }
-            
             // Validate password
             if (password === '') {
                 showError('regPasswordError', 'Fjalëkalimi është i detyrueshëm');
                 isValid = false;
-            } else if (!isValidPassword(password)) {
-                showError('regPasswordError', 'Fjalëkalimi duhet të ketë të paktën 8 karaktere, me shkronjë të madhe dhe numër');
+            } else if (password.length < 8) {
+                showError('regPasswordError', 'Fjalëkalimi duhet të ketë të paktën 8 karaktere');
                 isValid = false;
             }
             
@@ -73,11 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (successMessage) {
                     successMessage.style.display = 'block';
                     registerForm.reset();
-                    
-                    // Redirect to login page after 3 seconds
-                    setTimeout(function() {
-                        // window.location.href = 'login.html';
-                    }, 3000);
                 }
             }
         });
@@ -85,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Real-time validation on blur
         const nameInput = document.getElementById('regName');
         const emailInput = document.getElementById('regEmail');
-        const phoneInput = document.getElementById('regPhone');
         const passwordInput = document.getElementById('regPassword');
         const confirmPasswordInput = document.getElementById('regConfirmPassword');
         
@@ -98,14 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (emailInput) {
             emailInput.addEventListener('blur', function() {
                 validateEmail();
-            });
-        }
-        
-        if (phoneInput) {
-            phoneInput.addEventListener('blur', function() {
-                if (phoneInput.value.trim() !== '') {
-                    validatePhone();
-                }
             });
         }
         
@@ -158,24 +137,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    function validatePhone() {
-        const phone = document.getElementById('regPhone').value.trim();
-        if (phone !== '' && !isValidPhone(phone)) {
-            showError('regPhoneError', 'Ju lutem shkruani një numër telefoni të vlefshëm');
-            return false;
-        } else {
-            clearError('regPhoneError');
-            return true;
-        }
-    }
-    
     function validatePassword() {
         const password = document.getElementById('regPassword').value;
         if (password === '') {
             showError('regPasswordError', 'Fjalëkalimi është i detyrueshëm');
             return false;
-        } else if (!isValidPassword(password)) {
-            showError('regPasswordError', 'Fjalëkalimi duhet të ketë të paktën 8 karaktere, me shkronjë të madhe dhe numër');
+        } else if (password.length < 8) {
+            showError('regPasswordError', 'Fjalëkalimi duhet të ketë të paktën 8 karaktere');
             return false;
         } else {
             clearError('regPasswordError');
@@ -202,18 +170,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
-    }
-    
-    function isValidPhone(phone) {
-        // Accepts phone numbers with or without +, spaces, dashes, parentheses
-        const phoneRegex = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,9}$/;
-        return phoneRegex.test(phone);
-    }
-    
-    function isValidPassword(password) {
-        // At least 8 characters, one uppercase letter, and one number
-        const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
-        return passwordRegex.test(password);
     }
     
     function showError(errorId, message) {

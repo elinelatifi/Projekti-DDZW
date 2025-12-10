@@ -11,9 +11,7 @@
     --rose-pink: #ff69b4;
     --dark-pink: #ff1493;
     --soft-pink: #ffc0cb;
-    --floral-pink: #ffb3d9;
     --white: #ffffff;
-    --light-gray: #f8f8f8;
     --text-dark: #333333;
     --text-light: #666666;
     --border-color: #e0e0e0;
@@ -75,7 +73,6 @@ header {
 .nav-menu a:hover,
 .nav-menu a.active {
     background-color: rgba(255, 255, 255, 0.2);
-    opacity: 0.9;
 }
 
 .hamburger {
@@ -100,7 +97,7 @@ header {
     justify-content: space-between;
     padding: 4rem 2rem;
     background: linear-gradient(135deg, var(--light-pink), var(--soft-pink));
-    min-height: 500px;
+    min-height: 400px;
 }
 
 .hero-content {
@@ -134,7 +131,7 @@ header {
 }
 
 /* Buttons */
-.btn-primary,
+.btn,
 .btn-secondary {
     display: inline-block;
     padding: 12px 30px;
@@ -147,12 +144,12 @@ header {
     font-size: 1rem;
 }
 
-.btn-primary {
+.btn {
     background: linear-gradient(135deg, var(--rose-pink), var(--dark-pink));
     color: var(--white);
 }
 
-.btn-primary:hover {
+.btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
 }
@@ -172,26 +169,26 @@ header {
     width: 100%;
 }
 
-/* Features Section */
-.features {
+/* Services Section */
+.services {
     padding: 4rem 2rem;
     background-color: var(--white);
 }
 
-.features h2 {
+.services h2 {
     text-align: center;
     font-size: 2.5rem;
     color: var(--dark-pink);
     margin-bottom: 3rem;
 }
 
-.features-grid {
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
-.feature-card {
+.service-card {
     background: var(--light-pink);
     padding: 2rem;
     border-radius: 15px;
@@ -200,60 +197,24 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.feature-card:hover {
+.service-card:hover {
     transform: translateY(-5px);
 }
 
-.feature-icon {
+.service-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.feature-card h3 {
+.service-card h3 {
     color: var(--dark-pink);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
-.feature-card p {
+.service-card p {
     color: var(--text-light);
     margin-bottom: 1.5rem;
-}
-
-/* Gallery Preview */
-.gallery-preview {
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, var(--light-pink), var(--soft-pink));
-}
-
-.gallery-preview h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--dark-pink);
-    margin-bottom: 3rem;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.gallery-item {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
 }
 
 /* Page Header */
@@ -266,12 +227,6 @@ header {
 
 .page-header h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.page-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
 }
 
 /* About Section */
@@ -315,13 +270,11 @@ header {
     line-height: 1.8;
 }
 
-.values-section,
-.team-section {
+.values-section {
     margin-top: 4rem;
 }
 
-.values-section h2,
-.team-section h2 {
+.values-section h2 {
     text-align: center;
     color: var(--dark-pink);
     font-size: 2.5rem;
@@ -352,38 +305,6 @@ header {
     margin-bottom: 1rem;
 }
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.team-member {
-    text-align: center;
-    background: var(--light-pink);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 5px solid var(--rose-pink);
-}
-
-.team-member h3 {
-    color: var(--dark-pink);
-    margin-bottom: 0.5rem;
-}
-
-.team-member p {
-    color: var(--text-light);
-}
-
 /* Contact Section */
 .contact-section {
     padding: 4rem 2rem;
@@ -393,7 +314,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
-    flex-wrap: wrap;
 }
 
 .contact-info h2 {
@@ -504,15 +424,6 @@ header {
     cursor: pointer;
 }
 
-.checkbox-group a {
-    color: var(--rose-pink);
-    text-decoration: none;
-}
-
-.checkbox-group a:hover {
-    text-decoration: underline;
-}
-
 /* Auth Section */
 .auth-section {
     padding: 4rem 2rem;
@@ -572,10 +483,6 @@ header {
     text-decoration: underline;
 }
 
-.forgot-password {
-    font-size: 0.9rem;
-}
-
 /* Detail Section */
 .detail-section {
     padding: 4rem 2rem;
@@ -585,7 +492,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
-    flex-wrap: wrap;
 }
 
 .detail-image {
@@ -693,10 +599,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .features-grid,
-    .gallery-grid,
-    .values-grid,
-    .team-grid {
+    .services-grid,
+    .values-grid {
         grid-template-columns: 1fr;
     }
 
@@ -708,7 +612,7 @@ footer {
         flex-direction: column;
     }
 
-    .detail-actions .btn-primary,
+    .detail-actions .btn,
     .detail-actions .btn-secondary {
         width: 100%;
         text-align: center;
@@ -728,10 +632,8 @@ footer {
         font-size: 2rem;
     }
 
-    .features h2,
-    .gallery-preview h2,
-    .values-section h2,
-    .team-section h2 {
+    .services h2,
+    .values-section h2 {
         font-size: 2rem;
     }
 }

@@ -1,15 +1,15 @@
-# Projekti DDZW - Floral Beauty Website
+# Projekti DDZW - Floral Shop Website
 
-Një webfaqe moderne dhe responsive për një biznes floral me temë rozë dhe elemente florale.
+Një webfaqe e thjeshtë dhe moderne për një biznes floral me temë rozë dhe elemente florale.
 
 ## Përshkrimi i Projektit
 
-Ky projekt është një webfaqe e krijuar për një biznes floral që ofron shërbime të ndryshme si buketa të personalizuara, dekorime për evente dhe këshilla për kujdesin e lulet. Webfaqja është e krijuar në gjuhën shqipe dhe ka një dizajn modern me ngjyra rozë florale.
+Ky projekt është një webfaqe e krijuar për një biznes floral që ofron shërbime të ndryshme si buketa të personalizuara dhe dekorime për evente. Webfaqja është e krijuar në gjuhën shqipe dhe ka një dizajn të thjeshtë me ngjyra rozë florale.
 
 ## Faqet e Webfaqes
 
-1. **Faqja Kryesore (index.html)** - Faqja hyrëse me informacione për shërbimet dhe galeri
-2. **Rreth Nesh (about.html)** - Informacione rreth kompanisë, vlerave dhe ekipit
+1. **Faqja Kryesore (index.html)** - Faqja hyrëse me informacione për shërbimet
+2. **Rreth Nesh (about.html)** - Informacione rreth kompanisë dhe vlerave
 3. **Kontakti (contact.html)** - Formular kontakti me validim JavaScript
 4. **Hyrje (login.html)** - Faqe për hyrje në llogari me validim
 5. **Regjistrohu (register.html)** - Faqe për regjistrim të përdoruesve të rinj me validim
@@ -29,12 +29,13 @@ Ky projekt është një webfaqe e krijuar për një biznes floral që ofron shë
 - Validim i formularit të regjistrimit me kontroll të fjalëkalimit
 - Validim në kohë reale (real-time validation)
 - Mesazhe gabimi në shqip
+- Implementuar me Plain JavaScript (pa librari)
 
 ### Dizajni
 - Ngjyra rozë florale (pink floral theme)
+- Dizajn i thjeshtë dhe modern
 - Dizajn responsive për të gjitha pajisjet
 - Navigim i lehtë dhe intuitiv
-- Imazhe dhe elemente florale
 
 ### Responsive Design
 - Optimizuar për desktop, tablet dhe mobile
@@ -64,6 +65,13 @@ Projekti-DDZW/
 └── README.md
 ```
 
+## Imazhet e Nevojshme
+
+Imazhet e mëposhtme duhen shtuar në dosjen `images/`:
+- `hero.jpg` - Imazh për hero section
+- `about.jpg` - Imazh për faqen "Rreth Nesh"
+- `service.jpg` - Imazh për faqen e detajeve të shërbimit
+
 ## Si të Përdoret
 
 1. Hapni `index.html` në një shfletues web
@@ -84,7 +92,7 @@ Projekti-DDZW/
 
 ✅ **Dizajni dhe paraqitja:**
 - Dizajn responsive
-- Temë rozë florale me imazhe
+- Temë rozë florale
 
 ✅ **Kontrolli i versioneve:**
 - Përdorim i Git për menaxhimin e versioneve
@@ -94,7 +102,7 @@ Projekti-DDZW/
 
 - Imazhet në projekt janë placeholder. Ju mund të zëvendësoni me imazhe reale.
 - Validimi i formave është i implementuar me Plain JavaScript.
-- Webfaqja është e gatshme për përdorim dhe mund të shtohen funksionalitete shtesë në të ardhmen.
+- Webfaqja është e thjeshtë dhe e lehtë për përdorim.
 
 ## Autor
 

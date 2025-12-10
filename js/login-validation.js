@@ -39,12 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (successMessage) {
                     successMessage.style.display = 'block';
                     loginForm.reset();
-                    
-                    // Redirect to home page after 2 seconds (simulation)
-                    setTimeout(function() {
-                        // In a real application, you would handle authentication here
-                        // window.location.href = 'index.html';
-                    }, 2000);
                 }
             }
         });
