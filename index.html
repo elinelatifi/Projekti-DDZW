@@ -3,74 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faqja Kryesore - Projekti DDZW</title>
+    <title>Home - Projekti DDZW</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>💅 Beauty Salon</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Faqja Kryesore</a></li>
-                    <li><a href="about.html">Rreth Nesh</a></li>
-                    <li><a href="contact.html">Kontakti</a></li>
-                    <li><a href="login.html">Hyrje</a></li>
-                    <li><a href="register.html">Regjistrohu</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Mirë se vini</h2>
-                <p>Zbuloni bukurinë tuaj me shërbimet tona profesionale të kujdesit</p>
-                <a href="about.html" class="btn">Mëso më shumë</a>
-            </div>
-            <div class="hero-image">
-                <img src="images/hero.jpg" alt="Sallon bukurie">
-            </div>
-        </section>
-
-        <section class="services">
-            <div class="container">
-                <h2>Shërbimet Tona</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">💇</div>
-                        <h3>Frizurë</h3>
-                        <p>Frizura moderne dhe stile të reja</p>
-                        <a href="service-detail.html" class="btn-secondary">Shiko Detajet</a>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">💅</div>
-                        <h3>Manikyrë & Pedikyrë</h3>
-                        <p>Kujdes profesional për duart dhe këmbët</p>
-                        <a href="service-detail.html" class="btn-secondary">Shiko Detajet</a>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">✨</div>
-                        <h3>Trajtime</h3>
-                        <p>Trajtime për fytyrë dhe trup</p>
-                        <a href="service-detail.html" class="btn-secondary">Shiko Detajet</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <p>&copy; 2024 Beauty Salon. Të gjitha të drejtat e rezervuara.</p>
+            <div class="nav-brand">
+                <a href="index.html">DDZW</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">Rreth nesh</a></li>
+                <li><a href="services.html">Shërbimet</a></li>
+                <li><a href="contact.html">Kontakti</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Mirë se vini në DDZW</h1>
+            <p>Zgjidhje moderne dhe profesionale për nevojat tuaja</p>
+            <a href="services.html" class="btn btn-primary">Eksploro Shërbimet</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Pse të na zgjidhni ne?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Shpejtësi</h3>
+                    <p>Shërbime të shpejta dhe efikase për klientët tanë</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Profesionalizëm</h3>
+                    <p>Ekip me përvojë dhe ekspertizë në fushën tonë</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Cilësi</h3>
+                    <p>Standarde të larta cilësie në çdo projekt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News/Updates Section -->
+    <section class="updates">
+        <div class="container">
+            <h2 class="section-title">Lajmet e fundit</h2>
+            <div class="updates-grid">
+                <article class="update-card">
+                    <h3>Lansimi i shërbimit të ri</h3>
+                    <p>Me kënaqësi njoftojmë lansimin e shërbimit tonë të ri...</p>
+                    <a href="service-detail.html?id=1" class="read-more">Lexo më shumë →</a>
+                </article>
+                <article class="update-card">
+                    <h3>Partneritet i ri strategjik</h3>
+                    <p>Kemi nënshkruar një marrëveshje partneriteti me...</p>
+                    <a href="service-detail.html?id=2" class="read-more">Lexo më shumë →</a>
+                </article>
+                <article class="update-card">
+                    <h3>Eventi i ardhshëm</h3>
+                    <p>Ju ftojmë në eventin tonë që do të mbajmë...</p>
+                    <a href="service-detail.html?id=3" class="read-more">Lexo më shumë →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DDZW</h3>
+                    <p>Zgjidhje moderne për nevojat tuaja</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linqe të shpejta</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Rreth nesh</a></li>
+                        <li><a href="services.html">Shërbimet</a></li>
+                        <li><a href="contact.html">Kontakti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakti</h4>
+                    <p>Email: info@ddzw.com</p>
+                    <p>Tel: +355 XX XXX XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DDZW. Të gjitha të drejtat e rezervuara.</p>
+            </div>
         </div>
     </footer>
 

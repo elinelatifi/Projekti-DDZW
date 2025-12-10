@@ -7,77 +7,69 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>💅 Beauty Salon</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Faqja Kryesore</a></li>
-                    <li><a href="about.html">Rreth Nesh</a></li>
-                    <li><a href="contact.html">Kontakti</a></li>
-                    <li><a href="login.html">Hyrje</a></li>
-                    <li><a href="register.html">Regjistrohu</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Trajtime për Fytyrë</h1>
-            </div>
-        </section>
-
-        <section class="detail-section">
-            <div class="container">
-                <div class="detail-content">
-                    <div class="detail-image">
-                        <img src="images/service.jpg" alt="Trajtim për fytyrë">
-                    </div>
-                    <div class="detail-text">
-                        <h2>Përshkrimi i Shërbimit</h2>
-                        <p>Shërbimi ynë për trajtime për fytyrë ju ofron mundësinë për të kujdesur për lëkurën tuaj me produkte profesionale dhe teknika moderne. Ne punojmë me ju për të gjetur trajtimin perfekt për llojin tuaj të lëkurës.</p>
-                        
-                        <h3>Çfarë përfshin:</h3>
-                        <ul class="service-list">
-                            <li>Konsultim personal për llojin e lëkurës</li>
-                            <li>Përdorim i produkteve me cilësi të lartë</li>
-                        <li>Trajtim i personalizuar</li>
-                            <li>Kujdes profesional dhe këshilla</li>
-                        </ul>
-
-                        <h3>Si të Rezervoni:</h3>
-                        <ol class="service-list">
-                            <li>Na kontaktoni përmes formularit të kontaktit</li>
-                            <li>Diskutoni nevojat tuaja</li>
-                            <li>Rezervoni termin tuaj</li>
-                            <li>Gëzoni trajtimin profesional</li>
-                        </ol>
-
-                        <div class="detail-actions">
-                            <a href="contact.html" class="btn">Na Kontaktoni</a>
-                            <a href="index.html" class="btn-secondary">Kthehu në Faqen Kryesore</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <p>&copy; 2024 Beauty Salon. Të gjitha të drejtat e rezervuara.</p>
+            <div class="nav-brand">
+                <a href="index.html">DDZW</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Rreth nesh</a></li>
+                <li><a href="services.html">Shërbimet</a></li>
+                <li><a href="contact.html">Kontakti</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Detail Section -->
+    <section class="service-detail">
+        <div class="container">
+            <a href="services.html" class="back-link">← Kthehu te shërbimet</a>
+            <div id="serviceContent">
+                <!-- Content will be loaded dynamically -->
+                <h1>Duke ngarkuar...</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DDZW</h3>
+                    <p>Zgjidhje moderne për nevojat tuaja</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linqe të shpejta</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Rreth nesh</a></li>
+                        <li><a href="services.html">Shërbimet</a></li>
+                        <li><a href="contact.html">Kontakti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakti</h4>
+                    <p>Email: info@ddzw.com</p>
+                    <p>Tel: +355 XX XXX XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DDZW. Të gjitha të drejtat e rezervuara.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="js/service-detail.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

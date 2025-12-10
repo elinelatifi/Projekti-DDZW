@@ -6,117 +6,66 @@ document.addEventListener('DOMContentLoaded', function() {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Clear previous errors
-            clearErrors();
+            // Get form fields
+            const email = document.getElementById('loginEmail');
+            const password = document.getElementById('loginPassword');
             
-            // Get form values
-            const email = document.getElementById('loginEmail').value.trim();
-            const password = document.getElementById('loginPassword').value.trim();
+            // Get error message elements
+            const emailError = document.getElementById('loginEmailError');
+            const passwordError = document.getElementById('loginPasswordError');
+            
+            // Reset previous errors
+            clearErrors([email, password], [emailError, passwordError]);
             
             let isValid = true;
             
-            // Validate email
-            if (email === '') {
-                showError('loginEmailError', 'Email është i detyrueshëm');
+            // Validate Email
+            if (!email.value.trim()) {
+                showError(email, emailError, 'Email është i detyrueshëm');
                 isValid = false;
-            } else if (!isValidEmail(email)) {
-                showError('loginEmailError', 'Ju lutem shkruani një email të vlefshëm');
-                isValid = false;
-            }
-            
-            // Validate password
-            if (password === '') {
-                showError('loginPasswordError', 'Fjalëkalimi është i detyrueshëm');
-                isValid = false;
-            } else if (password.length < 6) {
-                showError('loginPasswordError', 'Fjalëkalimi duhet të ketë të paktën 6 karaktere');
+            } else if (!isValidEmail(email.value)) {
+                showError(email, emailError, 'Ju lutem shkruani një email të vlefshëm');
                 isValid = false;
             }
             
-            // If form is valid, show success message
+            // Validate Password
+            if (!password.value) {
+                showError(password, passwordError, 'Fjalëkalimi është i detyrueshëm');
+                isValid = false;
+            } else if (password.value.length < 6) {
+                showError(password, passwordError, 'Fjalëkalimi duhet të ketë të paktën 6 karaktere');
+                isValid = false;
+            }
+            
+            // If form is valid, show success message (in real app, this would submit to server)
             if (isValid) {
-                const successMessage = document.getElementById('loginSuccess');
-                if (successMessage) {
-                    successMessage.style.display = 'block';
-                    loginForm.reset();
-                }
+                alert('Hyrja u krye me sukses! (Kjo është një demonstrim)');
+                // In a real application, you would submit the form to a server here
+                // loginForm.submit();
             }
-        });
-        
-        // Real-time validation on blur
-        const emailInput = document.getElementById('loginEmail');
-        const passwordInput = document.getElementById('loginPassword');
-        
-        if (emailInput) {
-            emailInput.addEventListener('blur', function() {
-                validateEmail();
-            });
-        }
-        
-        if (passwordInput) {
-            passwordInput.addEventListener('blur', function() {
-                validatePassword();
-            });
-        }
-    }
-    
-    // Validation helper functions
-    function validateEmail() {
-        const email = document.getElementById('loginEmail').value.trim();
-        if (email === '') {
-            showError('loginEmailError', 'Email është i detyrueshëm');
-            return false;
-        } else if (!isValidEmail(email)) {
-            showError('loginEmailError', 'Ju lutem shkruani një email të vlefshëm');
-            return false;
-        } else {
-            clearError('loginEmailError');
-            return true;
-        }
-    }
-    
-    function validatePassword() {
-        const password = document.getElementById('loginPassword').value.trim();
-        if (password === '') {
-            showError('loginPasswordError', 'Fjalëkalimi është i detyrueshëm');
-            return false;
-        } else if (password.length < 6) {
-            showError('loginPasswordError', 'Fjalëkalimi duhet të ketë të paktën 6 karaktere');
-            return false;
-        } else {
-            clearError('loginPasswordError');
-            return true;
-        }
-    }
-    
-    // Utility functions
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-    
-    function showError(errorId, message) {
-        const errorElement = document.getElementById(errorId);
-        if (errorElement) {
-            errorElement.textContent = message;
-            errorElement.style.display = 'block';
-        }
-    }
-    
-    function clearError(errorId) {
-        const errorElement = document.getElementById(errorId);
-        if (errorElement) {
-            errorElement.textContent = '';
-            errorElement.style.display = 'none';
-        }
-    }
-    
-    function clearErrors() {
-        const errorElements = document.querySelectorAll('.error-message');
-        errorElements.forEach(function(element) {
-            element.textContent = '';
-            element.style.display = 'none';
         });
     }
 });
+
+// Helper function to validate email
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Helper function to show error
+function showError(input, errorElement, message) {
+    input.classList.add('error');
+    errorElement.textContent = message;
+    errorElement.classList.add('show');
+}
+
+// Helper function to clear errors
+function clearErrors(inputs, errorElements) {
+    inputs.forEach(input => input.classList.remove('error'));
+    errorElements.forEach(error => {
+        error.classList.remove('show');
+        error.textContent = '';
+    });
+}
 

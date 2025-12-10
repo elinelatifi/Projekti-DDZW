@@ -1,113 +1,82 @@
-# Projekti DDZW - Beauty Salon Website
+# Projekti-DDZW
 
-Një webfaqe e thjeshtë dhe moderne për një sallon bukurie me temë rozë dhe elemente florale.
+Projekt web i zhvilluar nga ekipi DDZW. Ky është një webfaqe moderne dhe funksionale që përmban të gjitha elementet bazë të kërkuara.
 
-## Përshkrimi i Projektit
+## 📋 Përmbajtja e Projektit
 
-Ky projekt është një webfaqe e krijuar për një sallon bukurie që ofron shërbime të ndryshme si frizurë, manikyrë, pedikyrë dhe trajtime për fytyrë dhe trup. Webfaqja është e krijuar në gjuhën shqipe dhe ka një dizajn të thjeshtë me ngjyra rozë florale.
+### Faqet e Webfaqes
 
-## Faqet e Webfaqes
+1. **Home/Dashboard** (`index.html`) - Faqja kryesore me hero section, features dhe lajmet e fundit
+2. **Rreth nesh** (`about.html`) - Informacione rreth kompanisë, vlerat dhe ekipi
+3. **Shërbimet** (`services.html`) - Lista e shërbimeve që ofrojmë
+4. **Detajet e Shërbimit** (`service-detail.html`) - Faqe dinamike për detajet e çdo shërbimi
+5. **Kontakti** (`contact.html`) - Formular kontakti me validim
+6. **Login** (`login.html`) - Faqe për hyrje në sistem
+7. **Register** (`register.html`) - Faqe për regjistrim të përdoruesve të rinj
 
-1. **Faqja Kryesore (index.html)** - Faqja hyrëse me informacione për shërbimet
-2. **Rreth Nesh (about.html)** - Informacione rreth kompanisë dhe vlerave
-3. **Kontakti (contact.html)** - Formular kontakti me validim JavaScript
-4. **Hyrje (login.html)** - Faqe për hyrje në llogari me validim
-5. **Regjistrohu (register.html)** - Faqe për regjistrim të përdoruesve të rinj me validim
-6. **Detajet e Shërbimit (service-detail.html)** - Faqe detaje për një shërbim specifik
+### Funksionalitetet
 
-## Teknologjitë e Përdorura
+- ✅ Navigation bar responsive me hamburger menu për mobile
+- ✅ Validim i formularëve me Plain JavaScript:
+  - Formular kontakti
+  - Formular login
+  - Formular register
+- ✅ Dizajn responsive që funksionon në të gjitha pajisjet
+- ✅ Footer i përbashkët në të gjitha faqet
+- ✅ Faqe dinamike për detajet e shërbimeve
 
-- **HTML5** - Struktura e faqes
-- **CSS3** - Stilizimi me ngjyra rozë florale dhe dizajn responsive
-- **JavaScript (Plain JS)** - Validimi i formave dhe funksionalitete dinamike
-
-## Karakteristikat
-
-### Validimi i Formave
-- Validim i plotë i formularit të kontaktit
-- Validim i formularit të hyrjes (login)
-- Validim i formularit të regjistrimit me kontroll të fjalëkalimit
-- Validim në kohë reale (real-time validation)
-- Mesazhe gabimi në shqip
-- Implementuar me Plain JavaScript (pa librari)
-
-### Dizajni
-- Ngjyra rozë florale (pink floral theme)
-- Dizajn i thjeshtë dhe modern
-- Dizajn responsive për të gjitha pajisjet
-- Navigim i lehtë dhe intuitiv
-
-### Responsive Design
-- Optimizuar për desktop, tablet dhe mobile
-- Menu hamburger për pajisjet mobile
-- Layout fleksibël që përshtatet me madhësinë e ekranit
-
-## Struktura e Projektit
+### Struktura e Projektit
 
 ```
 Projekti-DDZW/
 ├── index.html
 ├── about.html
+├── services.html
+├── service-detail.html
 ├── contact.html
 ├── login.html
 ├── register.html
-├── service-detail.html
 ├── css/
 │   └── style.css
 ├── js/
 │   ├── main.js
 │   ├── contact-validation.js
 │   ├── login-validation.js
-│   └── register-validation.js
-├── images/
-│   └── (imazhet e projektit)
-├── .gitignore
+│   ├── register-validation.js
+│   └── service-detail.js
 └── README.md
 ```
 
-## Imazhet e Nevojshme
+## 🚀 Si të përdoret
 
-Imazhet e mëposhtme duhen shtuar në dosjen `images/`:
-- `hero.jpg` - Imazh për hero section (sallon bukurie)
-- `about.jpg` - Imazh për faqen "Rreth Nesh" (sallon bukurie)
-- `service.jpg` - Imazh për faqen e detajeve të shërbimit (trajtim për fytyrë)
+1. Hapni `index.html` në browser për të parë faqen kryesore
+2. Navigoni nëpër faqet duke përdorur navigation bar
+3. Testoni validimin e formularëve në faqet Login, Register dhe Contact
 
-## Si të Përdoret
+## 🛠️ Teknologjitë e Përdorura
 
-1. Hapni `index.html` në një shfletues web
-2. Navigoni nëpër faqet duke përdorur menunë
-3. Testoni formularët me validim JavaScript
+- **HTML5** - Struktura e faqeve
+- **CSS3** - Stilizim dhe dizajn responsive
+- **JavaScript (Vanilla)** - Validim i formularëve dhe funksionalitete dinamike
 
-## Kërkesat e Profesorit
+## ✨ Karakteristikat
 
-✅ **Struktura e faqes:**
-- Të paktën 3 faqe kryesore (Home, About Us, Contact Us)
-- Faqe detaje (Service Detail)
-- Faqe Login dhe Register
+- Dizajn modern dhe profesional
+- Responsive design për mobile, tablet dhe desktop
+- Validim i plotë i formularëve
+- Navigation intuitive
+- Kod i organizuar dhe i lexueshëm
 
-✅ **Funksionalitetet bazë:**
-- Formularët për Login dhe Register
-- Validim JavaScript për formularin e kontaktit dhe Login/Register
-- Validim me Plain JavaScript (pa librari)
+## 📝 Shënime
 
-✅ **Dizajni dhe paraqitja:**
-- Dizajn responsive
-- Temë rozë florale
+- Validimi i formularëve është implementuar me Plain JavaScript (pa librari)
+- Në versionin final, do të shtohen funksionalitete shtesë si slider, animacione, etj.
+- Projekti është i gatshëm për integrim me backend në fazat e ardhshme
 
-✅ **Kontrolli i versioneve:**
-- Përdorim i Git për menaxhimin e versioneve
-- Publikim në GitHub
+## 👥 Kontribuesit
 
-## Shënime
+Ky projekt është zhvilluar nga ekipi DDZW.
 
-- Imazhet në projekt janë placeholder. Ju mund të zëvendësoni me imazhe reale.
-- Validimi i formave është i implementuar me Plain JavaScript.
-- Webfaqja është e thjeshtë dhe e lehtë për përdorim.
+## 📄 Licenca
 
-## Autor
-
-Projekti është krijuar si pjesë e projektit për lëndën DDZW.
-
-## Licenca
-
-Ky projekt është krijuar për qëllime edukative.
+Ky projekt është zhvilluar për qëllime edukative.

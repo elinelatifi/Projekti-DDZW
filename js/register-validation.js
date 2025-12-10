@@ -6,194 +6,95 @@ document.addEventListener('DOMContentLoaded', function() {
         registerForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Clear previous errors
-            clearErrors();
+            // Get form fields
+            const name = document.getElementById('registerName');
+            const email = document.getElementById('registerEmail');
+            const password = document.getElementById('registerPassword');
+            const confirmPassword = document.getElementById('registerConfirmPassword');
             
-            // Get form values
-            const name = document.getElementById('regName').value.trim();
-            const email = document.getElementById('regEmail').value.trim();
-            const password = document.getElementById('regPassword').value;
-            const confirmPassword = document.getElementById('regConfirmPassword').value;
-            const agreeTerms = document.getElementById('agreeTerms').checked;
+            // Get error message elements
+            const nameError = document.getElementById('registerNameError');
+            const emailError = document.getElementById('registerEmailError');
+            const passwordError = document.getElementById('registerPasswordError');
+            const confirmPasswordError = document.getElementById('registerConfirmPasswordError');
+            
+            // Reset previous errors
+            clearErrors([name, email, password, confirmPassword], 
+                       [nameError, emailError, passwordError, confirmPasswordError]);
             
             let isValid = true;
             
-            // Validate name
-            if (name === '') {
-                showError('regNameError', 'Emri dhe mbiemri janë të detyrueshëm');
+            // Validate Name
+            if (!name.value.trim()) {
+                showError(name, nameError, 'Emri është i detyrueshëm');
                 isValid = false;
-            } else if (name.length < 3) {
-                showError('regNameError', 'Emri duhet të ketë të paktën 3 karaktere');
+            } else if (name.value.trim().length < 2) {
+                showError(name, nameError, 'Emri duhet të ketë të paktën 2 karaktere');
                 isValid = false;
-            }
-            
-            // Validate email
-            if (email === '') {
-                showError('regEmailError', 'Email është i detyrueshëm');
-                isValid = false;
-            } else if (!isValidEmail(email)) {
-                showError('regEmailError', 'Ju lutem shkruani një email të vlefshëm');
+            } else if (!/^[a-zA-ZëËçÇ\s]+$/.test(name.value.trim())) {
+                showError(name, nameError, 'Emri duhet të përmbajë vetëm shkronja');
                 isValid = false;
             }
             
-            // Validate password
-            if (password === '') {
-                showError('regPasswordError', 'Fjalëkalimi është i detyrueshëm');
+            // Validate Email
+            if (!email.value.trim()) {
+                showError(email, emailError, 'Email është i detyrueshëm');
                 isValid = false;
-            } else if (password.length < 8) {
-                showError('regPasswordError', 'Fjalëkalimi duhet të ketë të paktën 8 karaktere');
-                isValid = false;
-            }
-            
-            // Validate confirm password
-            if (confirmPassword === '') {
-                showError('regConfirmPasswordError', 'Ju lutem konfirmoni fjalëkalimin');
-                isValid = false;
-            } else if (password !== confirmPassword) {
-                showError('regConfirmPasswordError', 'Fjalëkalimet nuk përputhen');
+            } else if (!isValidEmail(email.value)) {
+                showError(email, emailError, 'Ju lutem shkruani një email të vlefshëm');
                 isValid = false;
             }
             
-            // Validate terms agreement
-            if (!agreeTerms) {
-                showError('agreeTermsError', 'Ju duhet të pranoni kushtet dhe rregullat');
+            // Validate Password
+            if (!password.value) {
+                showError(password, passwordError, 'Fjalëkalimi është i detyrueshëm');
+                isValid = false;
+            } else if (password.value.length < 8) {
+                showError(password, passwordError, 'Fjalëkalimi duhet të ketë të paktën 8 karaktere');
+                isValid = false;
+            } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(password.value)) {
+                showError(password, passwordError, 'Fjalëkalimi duhet të përmbajë të paktën një shkronjë të vogël, një të madhe dhe një numër');
                 isValid = false;
             }
             
-            // If form is valid, show success message
+            // Validate Confirm Password
+            if (!confirmPassword.value) {
+                showError(confirmPassword, confirmPasswordError, 'Konfirmimi i fjalëkalimit është i detyrueshëm');
+                isValid = false;
+            } else if (password.value !== confirmPassword.value) {
+                showError(confirmPassword, confirmPasswordError, 'Fjalëkalimet nuk përputhen');
+                isValid = false;
+            }
+            
+            // If form is valid, show success message (in real app, this would submit to server)
             if (isValid) {
-                const successMessage = document.getElementById('registerSuccess');
-                if (successMessage) {
-                    successMessage.style.display = 'block';
-                    registerForm.reset();
-                }
+                alert('Regjistrimi u krye me sukses! (Kjo është një demonstrim)');
+                // In a real application, you would submit the form to a server here
+                // registerForm.submit();
             }
-        });
-        
-        // Real-time validation on blur
-        const nameInput = document.getElementById('regName');
-        const emailInput = document.getElementById('regEmail');
-        const passwordInput = document.getElementById('regPassword');
-        const confirmPasswordInput = document.getElementById('regConfirmPassword');
-        
-        if (nameInput) {
-            nameInput.addEventListener('blur', function() {
-                validateName();
-            });
-        }
-        
-        if (emailInput) {
-            emailInput.addEventListener('blur', function() {
-                validateEmail();
-            });
-        }
-        
-        if (passwordInput) {
-            passwordInput.addEventListener('blur', function() {
-                validatePassword();
-            });
-            
-            // Also validate confirm password when password changes
-            passwordInput.addEventListener('input', function() {
-                if (confirmPasswordInput.value !== '') {
-                    validateConfirmPassword();
-                }
-            });
-        }
-        
-        if (confirmPasswordInput) {
-            confirmPasswordInput.addEventListener('blur', function() {
-                validateConfirmPassword();
-            });
-        }
-    }
-    
-    // Validation helper functions
-    function validateName() {
-        const name = document.getElementById('regName').value.trim();
-        if (name === '') {
-            showError('regNameError', 'Emri dhe mbiemri janë të detyrueshëm');
-            return false;
-        } else if (name.length < 3) {
-            showError('regNameError', 'Emri duhet të ketë të paktën 3 karaktere');
-            return false;
-        } else {
-            clearError('regNameError');
-            return true;
-        }
-    }
-    
-    function validateEmail() {
-        const email = document.getElementById('regEmail').value.trim();
-        if (email === '') {
-            showError('regEmailError', 'Email është i detyrueshëm');
-            return false;
-        } else if (!isValidEmail(email)) {
-            showError('regEmailError', 'Ju lutem shkruani një email të vlefshëm');
-            return false;
-        } else {
-            clearError('regEmailError');
-            return true;
-        }
-    }
-    
-    function validatePassword() {
-        const password = document.getElementById('regPassword').value;
-        if (password === '') {
-            showError('regPasswordError', 'Fjalëkalimi është i detyrueshëm');
-            return false;
-        } else if (password.length < 8) {
-            showError('regPasswordError', 'Fjalëkalimi duhet të ketë të paktën 8 karaktere');
-            return false;
-        } else {
-            clearError('regPasswordError');
-            return true;
-        }
-    }
-    
-    function validateConfirmPassword() {
-        const password = document.getElementById('regPassword').value;
-        const confirmPassword = document.getElementById('regConfirmPassword').value;
-        if (confirmPassword === '') {
-            showError('regConfirmPasswordError', 'Ju lutem konfirmoni fjalëkalimin');
-            return false;
-        } else if (password !== confirmPassword) {
-            showError('regConfirmPasswordError', 'Fjalëkalimet nuk përputhen');
-            return false;
-        } else {
-            clearError('regConfirmPasswordError');
-            return true;
-        }
-    }
-    
-    // Utility functions
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-    
-    function showError(errorId, message) {
-        const errorElement = document.getElementById(errorId);
-        if (errorElement) {
-            errorElement.textContent = message;
-            errorElement.style.display = 'block';
-        }
-    }
-    
-    function clearError(errorId) {
-        const errorElement = document.getElementById(errorId);
-        if (errorElement) {
-            errorElement.textContent = '';
-            errorElement.style.display = 'none';
-        }
-    }
-    
-    function clearErrors() {
-        const errorElements = document.querySelectorAll('.error-message');
-        errorElements.forEach(function(element) {
-            element.textContent = '';
-            element.style.display = 'none';
         });
     }
 });
+
+// Helper function to validate email
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Helper function to show error
+function showError(input, errorElement, message) {
+    input.classList.add('error');
+    errorElement.textContent = message;
+    errorElement.classList.add('show');
+}
+
+// Helper function to clear errors
+function clearErrors(inputs, errorElements) {
+    inputs.forEach(input => input.classList.remove('error'));
+    errorElements.forEach(error => {
+        error.classList.remove('show');
+        error.textContent = '';
+    });
+}
 
