@@ -1,10 +1,10 @@
-# Projekti DDZW - Floral Shop Website
+# Projekti DDZW - Beauty Salon Website
 
-Një webfaqe e thjeshtë dhe moderne për një biznes floral me temë rozë dhe elemente florale.
+Një webfaqe e thjeshtë dhe moderne për një sallon bukurie me temë rozë dhe elemente florale.
 
 ## Përshkrimi i Projektit
 
-Ky projekt është një webfaqe e krijuar për një biznes floral që ofron shërbime të ndryshme si buketa të personalizuara dhe dekorime për evente. Webfaqja është e krijuar në gjuhën shqipe dhe ka një dizajn të thjeshtë me ngjyra rozë florale.
+Ky projekt është një webfaqe e krijuar për një sallon bukurie që ofron shërbime të ndryshme si frizurë, manikyrë, pedikyrë dhe trajtime për fytyrë dhe trup. Webfaqja është e krijuar në gjuhën shqipe dhe ka një dizajn të thjeshtë me ngjyra rozë florale.
 
 ## Faqet e Webfaqes
 
@@ -68,9 +68,9 @@ Projekti-DDZW/
 ## Imazhet e Nevojshme
 
 Imazhet e mëposhtme duhen shtuar në dosjen `images/`:
-- `hero.jpg` - Imazh për hero section
-- `about.jpg` - Imazh për faqen "Rreth Nesh"
-- `service.jpg` - Imazh për faqen e detajeve të shërbimit
+- `hero.jpg` - Imazh për hero section (sallon bukurie)
+- `about.jpg` - Imazh për faqen "Rreth Nesh" (sallon bukurie)
+- `service.jpg` - Imazh për faqen e detajeve të shërbimit (trajtim për fytyrë)
 
 ## Si të Përdoret
 
