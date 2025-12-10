@@ -3,88 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Projekti DDZW</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Hyrje - A&E Beauty</title>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html">DDZW</a>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Rreth nesh</a></li>
-                <li><a href="services.html">Shërbimet</a></li>
-                <li><a href="contact.html">Kontakti</a></li>
-                <li><a href="login.html" class="active">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <header class="header">
+        <nav class="nav-left">
+            <a href="home.html">Faqja Kryesore</a>
+            <a href="sherbimet.html">Shërbimet</a>
+            <a href="rreth-nesh.html">Rreth nesh</a>
+            <a href="contact.html">Kontakti</a>
+        </nav>
 
-    <!-- Login Section -->
-    <section class="auth-section">
-        <div class="container">
+        <a href="home.html" class="logo">
+            <img src="salon logo.png" alt="A&E Beauty Logo">
+        </a>
+
+        <div class="header-right">
+            <a href="login.html" class="btn-login active">Hyr</a>
+            <a href="register.html" class="btn-register">Regjistrohu</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
             <div class="auth-container">
-                <h2>Hyr në llogari</h2>
+                <h1>Hyr në llogari</h1>
+                <p>Nuk keni llogari? <a href="register.html">Regjistrohu këtu</a></p>
+                
                 <form id="loginForm" class="auth-form">
                     <div class="form-group">
                         <label for="loginEmail">Email</label>
-                        <input type="email" id="loginEmail" name="email" required>
+                        <input type="email" id="loginEmail" placeholder="shkruani email-in tuaj" required>
                         <span class="error-message" id="loginEmailError"></span>
                     </div>
+                    
                     <div class="form-group">
                         <label for="loginPassword">Fjalëkalimi</label>
-                        <input type="password" id="loginPassword" name="password" required>
+                        <input type="password" id="loginPassword" placeholder="shkruani fjalëkalimin" required>
                         <span class="error-message" id="loginPasswordError"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Hyr</button>
-                    <p class="auth-link">
-                        Nuk ke llogari? <a href="register.html">Regjistrohu këtu</a>
-                    </p>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Më kujto</span>
+                        </label>
+                        <a href="#" class="forgot-link">Harruat fjalëkalimin?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full">Hyr</button>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>DDZW</h3>
-                    <p>Zgjidhje moderne për nevojat tuaja</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Linqe të shpejta</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Rreth nesh</a></li>
-                        <li><a href="services.html">Shërbimet</a></li>
-                        <li><a href="contact.html">Kontakti</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Kontakti</h4>
-                    <p>Email: info@ddzw.com</p>
-                    <p>Tel: +355 XX XXX XXXX</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DDZW. Të gjitha të drejtat e rezervuara.</p>
-            </div>
-        </div>
+        <p>&copy; 2024 A&E Beauty. Të gjitha të drejtat e rezervuara.</p>
     </footer>
 
-    <script src="js/login-validation.js"></script>
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-

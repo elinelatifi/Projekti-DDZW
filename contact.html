@@ -3,125 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakti - Projekti DDZW</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Kontakt - A&E Beauty</title>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html">DDZW</a>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Rreth nesh</a></li>
-                <li><a href="services.html">Shërbimet</a></li>
-                <li><a href="contact.html" class="active">Kontakti</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <header class="header">
+        <nav class="nav-left">
+            <a href="home.html">Faqja Kryesore</a>
+            <a href="sherbimet.html">Shërbimet</a>
+            <a href="rreth-nesh.html">Rreth nesh</a>
+            <a href="contact.html" class="active">Kontakti</a>
+        </nav>
 
-    <!-- Contact Hero Section -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Na kontaktoni</h1>
-            <p>Jemi këtu për t'ju ndihmuar</p>
-        </div>
-    </section>
+        <a href="home.html" class="logo">
+            <img src="salon logo.png" alt="A&E Beauty Logo">
+        </a>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-wrapper">
+        <div class="header-right">
+            <a href="login.html" class="btn-login">Hyr</a>
+            <button class="btn-book" id="bookBtn">Rezervo</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact" class="contact">
+            <h2>Na kontaktoni</h2>
+            <div class="contact-container">
                 <div class="contact-info">
-                    <h2>Informacione kontakti</h2>
-                    <div class="info-item">
-                        <h3>📍 Adresa</h3>
-                        <p>Rruga e Dëshmorëve, Tiranë, Shqipëri</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>📧 Email</h3>
-                        <p>info@ddzw.com</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>📞 Telefoni</h3>
-                        <p>+355 XX XXX XXXX</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>🕒 Orari</h3>
-                        <p>E Hënë - E Premte: 09:00 - 18:00</p>
-                        <p>E Shtunë: 10:00 - 14:00</p>
-                    </div>
+                    <h3>Informacione kontakti</h3>
+                    <p><strong>Telefoni:</strong> +355 69 123 4567</p>
+                    <p><strong>Email:</strong> info@aebeauty.com</p>
+                    <p><strong>Adresa:</strong> Rruga Dëshmorët e Kombit, Tiranë</p>
+                    <p><strong>Orari:</strong> E Hënë - E Shtunë: 9:00-19:00, E Diel: 10:00-17:00</p>
                 </div>
-                <div class="contact-form-container">
-                    <h2>Dërgo mesazh</h2>
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="contactName">Emri</label>
-                            <input type="text" id="contactName" name="name" required>
-                            <span class="error-message" id="contactNameError"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactEmail">Email</label>
-                            <input type="email" id="contactEmail" name="email" required>
-                            <span class="error-message" id="contactEmailError"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactSubject">Subjekti</label>
-                            <input type="text" id="contactSubject" name="subject" required>
-                            <span class="error-message" id="contactSubjectError"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactMessage">Mesazhi</label>
-                            <textarea id="contactMessage" name="message" rows="5" required></textarea>
-                            <span class="error-message" id="contactMessageError"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Dërgo mesazhin</button>
-                    </form>
-                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" id="contactName" placeholder="Emri juaj" required>
+                    <span class="error-message" id="nameError"></span>
+                    <input type="email" id="contactEmail" placeholder="Email juaj" required>
+                    <span class="error-message" id="emailError"></span>
+                    <textarea id="contactMessage" placeholder="Mesazhi juaj" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                    <button type="submit" class="btn-primary">Dërgo mesazhin</button>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>DDZW</h3>
-                    <p>Zgjidhje moderne për nevojat tuaja</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Linqe të shpejta</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Rreth nesh</a></li>
-                        <li><a href="services.html">Shërbimet</a></li>
-                        <li><a href="contact.html">Kontakti</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Kontakti</h4>
-                    <p>Email: info@ddzw.com</p>
-                    <p>Tel: +355 XX XXX XXXX</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DDZW. Të gjitha të drejtat e rezervuara.</p>
-            </div>
-        </div>
+        <p>&copy; 2024 A&E Beauty. Të gjitha të drejtat e rezervuara.</p>
     </footer>
 
-    <script src="js/contact-validation.js"></script>
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
