@@ -7,109 +7,121 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>💅 Beauty Salon</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Faqja Kryesore</a></li>
-                    <li><a href="about.html">Rreth Nesh</a></li>
-                    <li><a href="contact.html" class="active">Kontakti</a></li>
-                    <li><a href="login.html">Hyrje</a></li>
-                    <li><a href="register.html">Regjistrohu</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Na Kontaktoni</h1>
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h2>Informacione Kontakti</h2>
-                        <div class="info-item">
-                            <div class="info-icon">📍</div>
-                            <div>
-                                <h3>Adresa</h3>
-                                <p>Rruga Dëshmorët e Kombit<br>Prishtinë, Kosovë</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">📞</div>
-                            <div>
-                                <h3>Telefoni</h3>
-                                <p>+383 44 123 456</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">✉️</div>
-                            <div>
-                                <h3>Email</h3>
-                                <p>info@beautysalon.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-wrapper">
-                        <h2>Dërgoni Mesazh</h2>
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Emri dhe Mbiemri *</label>
-                                <input type="text" id="name" name="name" required>
-                                <span class="error-message" id="nameError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                                <span class="error-message" id="emailError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="subject">Tema *</label>
-                                <input type="text" id="subject" name="subject" required>
-                                <span class="error-message" id="subjectError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Mesazhi *</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                                <span class="error-message" id="messageError"></span>
-                            </div>
-
-                            <button type="submit" class="btn">Dërgo Mesazhin</button>
-                        </form>
-                        <div id="formSuccess" class="success-message" style="display: none;">
-                            Mesazhi u dërgua me sukses! Do t'ju kontaktojmë së shpejti.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <p>&copy; 2024 Beauty Salon. Të gjitha të drejtat e rezervuara.</p>
+            <div class="nav-brand">
+                <a href="index.html">DDZW</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Rreth nesh</a></li>
+                <li><a href="services.html">Shërbimet</a></li>
+                <li><a href="contact.html" class="active">Kontakti</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Na kontaktoni</h1>
+            <p>Jemi këtu për t'ju ndihmuar</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Informacione kontakti</h2>
+                    <div class="info-item">
+                        <h3>📍 Adresa</h3>
+                        <p>Rruga e Dëshmorëve, Tiranë, Shqipëri</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p>info@ddzw.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Telefoni</h3>
+                        <p>+355 XX XXX XXXX</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>🕒 Orari</h3>
+                        <p>E Hënë - E Premte: 09:00 - 18:00</p>
+                        <p>E Shtunë: 10:00 - 14:00</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h2>Dërgo mesazh</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Emri</label>
+                            <input type="text" id="contactName" name="name" required>
+                            <span class="error-message" id="contactNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                            <span class="error-message" id="contactEmailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subjekti</label>
+                            <input type="text" id="contactSubject" name="subject" required>
+                            <span class="error-message" id="contactSubjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Mesazhi</label>
+                            <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="contactMessageError"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Dërgo mesazhin</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DDZW</h3>
+                    <p>Zgjidhje moderne për nevojat tuaja</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linqe të shpejta</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Rreth nesh</a></li>
+                        <li><a href="services.html">Shërbimet</a></li>
+                        <li><a href="contact.html">Kontakti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakti</h4>
+                    <p>Email: info@ddzw.com</p>
+                    <p>Tel: +355 XX XXX XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DDZW. Të gjitha të drejtat e rezervuara.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/contact-validation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
