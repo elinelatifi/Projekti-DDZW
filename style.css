@@ -18,7 +18,7 @@ body {
     flex-direction: column;
 }
 
-/* Header Styles */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -101,7 +101,7 @@ body {
     box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
 }
 
-/* Hero Section */
+
 .hero {
     position: relative;
     height: 100vh;
@@ -169,7 +169,7 @@ body {
     box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
 }
 
-/* Services Section */
+
 .services {
     padding: 100px 50px;
     background: #f8f8f8;
@@ -221,7 +221,7 @@ body {
     line-height: 1.6;
 }
 
-/* Contact Section */
+
 .contact {
     padding: 100px 50px;
     background: white;
@@ -279,7 +279,7 @@ body {
     border-color: #ffb6c1;
 }
 
-/* Footer */
+
 .footer {
     background: #333;
     color: white;
@@ -288,7 +288,7 @@ body {
     margin-top: auto;
 }
 
-/* Modal Styles */
+
 .modal {
     display: none;
     position: fixed;
@@ -350,7 +350,7 @@ body {
     border-color: #ffb6c1;
 }
 
-/* About Us Page Styles */
+
 .about-hero {
     margin-top: 100px;
     padding: 80px 50px;
@@ -462,7 +462,7 @@ body {
     line-height: 1.6;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -538,7 +538,7 @@ body {
     }
 }
 
-/* Login/Register Styles */
+
 .btn-login, .btn-register {
     padding: 10px 20px;
     border-radius: 20px;

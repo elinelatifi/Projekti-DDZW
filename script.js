@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,7 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Modal functionality
+
 const modal = document.getElementById('bookingModal');
 const bookBtn = document.getElementById('bookBtn');
 
@@ -45,7 +45,7 @@ if (modal) {
     });
 }
 
-// Contact Form Validation (Plain JavaScript)
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -60,7 +60,7 @@ if (contactForm) {
         
         let isValid = true;
         
-        // Reset errors
+       
         nameError.classList.remove('show');
         emailError.classList.remove('show');
         messageError.classList.remove('show');
@@ -68,7 +68,7 @@ if (contactForm) {
         email.classList.remove('error');
         message.classList.remove('error');
         
-        // Validate name
+        
         if (name.value.trim() === '') {
             nameError.textContent = 'Ju lutem shkruani emrin tuaj';
             nameError.classList.add('show');
@@ -81,7 +81,7 @@ if (contactForm) {
             isValid = false;
         }
         
-        // Validate email
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email.value.trim() === '') {
             emailError.textContent = 'Ju lutem shkruani email-in tuaj';
@@ -95,7 +95,7 @@ if (contactForm) {
             isValid = false;
         }
         
-        // Validate message
+        
         if (message.value.trim() === '') {
             messageError.textContent = 'Ju lutem shkruani mesazhin tuaj';
             messageError.classList.add('show');
@@ -115,7 +115,7 @@ if (contactForm) {
     });
 }
 
-// Login Form Validation (Plain JavaScript)
+
 const loginForm = document.getElementById('loginForm');
 if (loginForm) {
     loginForm.addEventListener('submit', function(e) {
@@ -128,13 +128,13 @@ if (loginForm) {
         
         let isValid = true;
         
-        // Reset errors
+        
         emailError.classList.remove('show');
         passwordError.classList.remove('show');
         email.classList.remove('error');
         password.classList.remove('error');
         
-        // Validate email
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email.value.trim() === '') {
             emailError.textContent = 'Ju lutem shkruani email-in tuaj';
@@ -148,7 +148,7 @@ if (loginForm) {
             isValid = false;
         }
         
-        // Validate password
+       
         if (password.value === '') {
             passwordError.textContent = 'Ju lutem shkruani fjalëkalimin';
             passwordError.classList.add('show');
@@ -163,13 +163,13 @@ if (loginForm) {
         
         if (isValid) {
             alert('Hyrja u krye me sukses! Mirë se vini!');
-            // Në versionin final, këtu do të bëhet dërguar te serveri
+            
             window.location.href = 'home.html';
         }
     });
 }
 
-// Register Form Validation (Plain JavaScript)
+
 const registerForm = document.getElementById('registerForm');
 if (registerForm) {
     registerForm.addEventListener('submit', function(e) {
@@ -191,7 +191,7 @@ if (registerForm) {
         
         let isValid = true;
         
-        // Reset errors
+        
         nameError.classList.remove('show');
         emailError.classList.remove('show');
         phoneError.classList.remove('show');
@@ -205,7 +205,7 @@ if (registerForm) {
         password.classList.remove('error');
         passwordConfirm.classList.remove('error');
         
-        // Validate name
+        
         if (name.value.trim() === '') {
             nameError.textContent = 'Ju lutem shkruani emrin tuaj';
             nameError.classList.add('show');
@@ -218,7 +218,7 @@ if (registerForm) {
             isValid = false;
         }
         
-        // Validate email
+       
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email.value.trim() === '') {
             emailError.textContent = 'Ju lutem shkruani email-in tuaj';
@@ -232,7 +232,7 @@ if (registerForm) {
             isValid = false;
         }
         
-        // Validate phone
+        
         const phoneRegex = /^(\+355|0)[0-9]{9}$/;
         if (phone.value.trim() === '') {
             phoneError.textContent = 'Ju lutem shkruani numrin e telefonit';
@@ -246,7 +246,7 @@ if (registerForm) {
             isValid = false;
         }
         
-        // Validate password
+        
         if (password.value === '') {
             passwordError.textContent = 'Ju lutem shkruani fjalëkalimin';
             passwordError.classList.add('show');
@@ -259,7 +259,7 @@ if (registerForm) {
             isValid = false;
         }
         
-        // Validate password confirmation
+        
         if (passwordConfirm.value === '') {
             passwordConfirmError.textContent = 'Ju lutem konfirmoni fjalëkalimin';
             passwordConfirmError.classList.add('show');
@@ -272,7 +272,7 @@ if (registerForm) {
             isValid = false;
         }
         
-        // Validate terms agreement
+        
         if (!agreeTerms.checked) {
             agreeTermsError.textContent = 'Ju duhet të pranoni kushtet dhe rregullat';
             agreeTermsError.classList.add('show');
@@ -281,15 +281,15 @@ if (registerForm) {
         
         if (isValid) {
             alert('Regjistrimi u krye me sukses! Tani mund të hyni në llogari.');
-            // Në versionin final, këtu do të bëhet dërguar te serveri
+            
             window.location.href = 'login.html';
         }
     });
 }
 
-// Header mbetet fiks - pa efekte scroll
 
-// Set minimum date for booking to today
+
+
 const dateInput = document.querySelector('input[type="date"]');
 if (dateInput) {
     const today = new Date().toISOString().split('T')[0];

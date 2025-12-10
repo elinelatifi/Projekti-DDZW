@@ -1,13 +1,13 @@
-// Service Detail Page - Load content based on ID
+
 document.addEventListener('DOMContentLoaded', function() {
     const serviceContent = document.getElementById('serviceContent');
     
     if (serviceContent) {
-        // Get service ID from URL
+       
         const urlParams = new URLSearchParams(window.location.search);
         const serviceId = urlParams.get('id') || '1';
         
-        // Service data
+       
         const services = {
             '1': {
                 icon: '💻',
@@ -95,10 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
         
-        // Get service data
+        
         const service = services[serviceId] || services['1'];
         
-        // Build HTML content
+       
         let html = `
             <div class="service-detail-content">
                 <div class="service-icon">${service.icon}</div>

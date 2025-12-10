@@ -1,4 +1,4 @@
-// Register Form Validation - Plain JavaScript
+
 document.addEventListener('DOMContentLoaded', function() {
     const registerForm = document.getElementById('registerForm');
     
@@ -6,25 +6,25 @@ document.addEventListener('DOMContentLoaded', function() {
         registerForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form fields
+            
             const name = document.getElementById('registerName');
             const email = document.getElementById('registerEmail');
             const password = document.getElementById('registerPassword');
             const confirmPassword = document.getElementById('registerConfirmPassword');
             
-            // Get error message elements
+            
             const nameError = document.getElementById('registerNameError');
             const emailError = document.getElementById('registerEmailError');
             const passwordError = document.getElementById('registerPasswordError');
             const confirmPasswordError = document.getElementById('registerConfirmPasswordError');
             
-            // Reset previous errors
+            
             clearErrors([name, email, password, confirmPassword], 
                        [nameError, emailError, passwordError, confirmPasswordError]);
             
             let isValid = true;
             
-            // Validate Name
+            
             if (!name.value.trim()) {
                 showError(name, nameError, 'Emri është i detyrueshëm');
                 isValid = false;
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
             
-            // Validate Email
+            
             if (!email.value.trim()) {
                 showError(email, emailError, 'Email është i detyrueshëm');
                 isValid = false;
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
             
-            // Validate Password
+            
             if (!password.value) {
                 showError(password, passwordError, 'Fjalëkalimi është i detyrueshëm');
                 isValid = false;
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
             
-            // Validate Confirm Password
+            
             if (!confirmPassword.value) {
                 showError(confirmPassword, confirmPasswordError, 'Konfirmimi i fjalëkalimit është i detyrueshëm');
                 isValid = false;
@@ -66,30 +66,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
             
-            // If form is valid, show success message (in real app, this would submit to server)
+            
             if (isValid) {
                 alert('Regjistrimi u krye me sukses! (Kjo është një demonstrim)');
-                // In a real application, you would submit the form to a server here
-                // registerForm.submit();
+                
             }
         });
     }
 });
 
-// Helper function to validate email
+
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// Helper function to show error
+
 function showError(input, errorElement, message) {
     input.classList.add('error');
     errorElement.textContent = message;
     errorElement.classList.add('show');
 }
 
-// Helper function to clear errors
+
 function clearErrors(inputs, errorElements) {
     inputs.forEach(input => input.classList.remove('error'));
     errorElements.forEach(error => {
