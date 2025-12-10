@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Shërbimet - A&E Beauty</title>
+    <title>A&E Beauty - Faqja Kryesore</title>
 </head>
 <body>
     <header class="header">
         <nav class="nav-left">
-            <a href="home.html">Faqja Kryesore</a>
-            <a href="sherbimet.html" class="active">Shërbimet</a>
+            <a href="home.html" class="active">Faqja Kryesore</a>
+            <a href="sherbimet.html">Shërbimet</a>
             <a href="rreth-nesh.html">Rreth nesh</a>
             <a href="contact.html">Kontakti</a>
         </nav>
@@ -27,36 +27,43 @@
     </header>
 
     <main>
-        <section class="page-header">
-            <h1>Shërbimet tona</h1>
-            <p>Ne ofrojmë një gamë të gjerë shërbimesh bukurie për të plotësuar nevojat tuaja</p>
+        <section class="hero">
+            <div class="background">
+                <img src="background.png" alt="Sallon bukurie">
+            </div>
+            <div class="hero-content">
+                <h1>Mirë se vini në A&E Beauty</h1>
+                <p>Udhëtimi juaj drejt bukurisë dhe shëndetit fillon këtu</p>
+                <a href="sherbimet.html" class="btn-primary">Shiko Shërbimet</a>
+            </div>
         </section>
 
         <section id="services" class="services">
+            <h2>Shërbimet tona</h2>
             <div class="services-grid">
                 <div class="service-card" onclick="window.location.href='detaje-sherbimi.html?id=1'">
                     <div class="service-icon">💇</div>
                     <h3>Stilizim Flokësh</h3>
-                    <p>Shërbime profesionale për flokët tuaj. Ne ofrojmë prerje moderne, ngjyrosje me cilësi të lartë, dhe stilizim për çdo rast.</p>
-                    <a href="detaje-sherbimi.html?id=1" class="btn-link">Më shumë detaje →</a>
+                    <p>Prerje profesionale, ngjyrosje dhe stilizim flokësh</p>
+                    <a href="detaje-sherbimi.html?id=1" class="btn-link">Më shumë →</a>
                 </div>
                 <div class="service-card" onclick="window.location.href='detaje-sherbimi.html?id=2'">
                     <div class="service-icon">💅</div>
                     <h3>Kujdesi i Thonjve</h3>
-                    <p>Manikyr dhe pedikyr profesionale me produkte premium. Ne ofrojmë gjithashtu dizajn thonjsh artistik për të gjitha stilet.</p>
-                    <a href="detaje-sherbimi.html?id=2" class="btn-link">Më shumë detaje →</a>
+                    <p>Manikyr, pedikyr dhe dizajn thonjsh</p>
+                    <a href="detaje-sherbimi.html?id=2" class="btn-link">Më shumë →</a>
                 </div>
                 <div class="service-card" onclick="window.location.href='detaje-sherbimi.html?id=3'">
                     <div class="service-icon">✨</div>
                     <h3>Trajtim i Fytyrës</h3>
-                    <p>Trajtime fytyre profesionale për lëkurë të shëndetshme dhe të shkëlqyer. Ne përdorim produkte organike dhe teknika moderne.</p>
-                    <a href="detaje-sherbimi.html?id=3" class="btn-link">Më shumë detaje →</a>
+                    <p>Trajtime fytyre për lëkurë të shkëlqyer</p>
+                    <a href="detaje-sherbimi.html?id=3" class="btn-link">Më shumë →</a>
                 </div>
                 <div class="service-card" onclick="window.location.href='detaje-sherbimi.html?id=4'">
                     <div class="service-icon">💆</div>
                     <h3>Masazh Terapi</h3>
-                    <p>Shërbime masazhi relaksuese dhe terapeutike për të reduktuar stresin dhe për të përmirësuar shëndetin tuaj.</p>
-                    <a href="detaje-sherbimi.html?id=4" class="btn-link">Më shumë detaje →</a>
+                    <p>Shërbime masazhi relaksuese dhe terapeutike</p>
+                    <a href="detaje-sherbimi.html?id=4" class="btn-link">Më shumë →</a>
                 </div>
             </div>
         </section>

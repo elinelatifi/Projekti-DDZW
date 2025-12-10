@@ -3,31 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detajet e Shërbimit - A&E Beauty Salon</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Detajet e Shërbimit - A&E Beauty</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>A&E Beauty Salon</h1>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Faqja Kryesore</a></li>
-                    <li><a href="sherbimet.html">Shërbimet</a></li>
-                    <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                    <li><a href="login.html">Kyçu</a></li>
-                    <li><a href="register.html">Regjistrohu</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+    <header class="header">
+        <nav class="nav-left">
+            <a href="home.html">Faqja Kryesore</a>
+            <a href="sherbimet.html">Shërbimet</a>
+            <a href="rreth-nesh.html">Rreth nesh</a>
+            <a href="contact.html">Kontakti</a>
         </nav>
+
+        <a href="home.html" class="logo">
+            <img src="salon logo.png" alt="A&E Beauty Logo">
+        </a>
+
+        <div class="header-right">
+            <a href="login.html" class="btn-login">Hyr</a>
+            <button class="btn-book" id="bookBtn">Rezervo</button>
+        </div>
     </header>
 
     <main>
@@ -35,43 +31,17 @@
             <div class="container">
                 <a href="sherbimet.html" class="back-link">← Kthehu te shërbimet</a>
                 <div id="serviceDetail">
-                    <!-- Content will be loaded dynamically -->
                     <h1>Duke ngarkuar...</h1>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>A&E Beauty Salon</h3>
-                    <p>Ku bukuria takon profesionin</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Lidhje të Shpejta</h3>
-                    <ul>
-                        <li><a href="index.html">Faqja Kryesore</a></li>
-                        <li><a href="sherbimet.html">Shërbimet</a></li>
-                        <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Kontakt</h3>
-                    <p>Email: info@aebeautysalon.com</p>
-                    <p>Tel: +355 XX XXX XXXX</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 A&E Beauty Salon. Të gjitha të drejtat e rezervuara.</p>
-            </div>
-        </div>
+    <footer class="footer">
+        <p>A&E Beauty. </p>
     </footer>
 
     <script src="js/service-detail.js"></script>
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-

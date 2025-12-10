@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Trajtime për flokët për shëndet dhe shkëlqim',
                     'Konsultime për stilin më të përshtatshëm për ju'
                 ],
-                price: '2000 - 5000 lekë',
+                price: '50-70 euro',
                 duration: '1-3 orë'
             },
             '2': {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Trajtim thonjsh për shëndet',
                     'Produkte premium për rezultate më të mira'
                 ],
-                price: '1500 - 3000 lekë',
+                price: '15-20 euro',
                 duration: '45 min - 1.5 orë'
             },
             '3': {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Produkte organike dhe natyrore',
                     'Konsultime për kujdesin e lëkurës'
                 ],
-                price: '3000 - 6000 lekë',
+                price: '80-120 euro',
                 duration: '1-1.5 orë'
             },
             '4': {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Masazh për shpinë dhe qafë',
                     'Masazh për këmbë për relaksim'
                 ],
-                price: '2500 - 5000 lekë',
+                price: '50-75 euro',
                 duration: '1-1.5 orë'
             }
         };
