@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Projekti DDZW</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">DDZW</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Rreth nesh</a></li>
+                <li><a href="services.html">Shërbimet</a></li>
+                <li><a href="contact.html">Kontakti</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <h2>Krijo llogari të re</h2>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName">Emri</label>
+                        <input type="text" id="registerName" name="name" required>
+                        <span class="error-message" id="registerNameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                        <span class="error-message" id="registerEmailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Fjalëkalimi</label>
+                        <input type="password" id="registerPassword" name="password" required>
+                        <span class="error-message" id="registerPasswordError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Konfirmo fjalëkalimin</label>
+                        <input type="password" id="registerConfirmPassword" name="confirmPassword" required>
+                        <span class="error-message" id="registerConfirmPasswordError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Regjistrohu</button>
+                    <p class="auth-link">
+                        Ke tashmë llogari? <a href="login.html">Hyr këtu</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DDZW</h3>
+                    <p>Zgjidhje moderne për nevojat tuaja</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Linqe të shpejta</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Rreth nesh</a></li>
+                        <li><a href="services.html">Shërbimet</a></li>
+                        <li><a href="contact.html">Kontakti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakti</h4>
+                    <p>Email: info@ddzw.com</p>
+                    <p>Tel: +355 XX XXX XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DDZW. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/register-validation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
